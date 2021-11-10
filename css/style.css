@@ -49,13 +49,35 @@ html,body,p{
 	padding: 0px 20px 0px 20px;
 }
 .navigation-menu{
+	cursor: pointer;
+	width: 37px;
+	height: auto;
 	display: none;
 }
-
-.navigation-menu svg{
-	width: 20px;
-	cursor: pointer;
-
+.navigation-menu  span{
+	margin: 6px 0;
+	display: block;
+	width: 100%;
+	height: 5px;
+	opacity: 0.9;
+	border-radius: 5px;
+	background-color: black;
+	transition: transform 1.2s , display 7.2s;
+}
+.navigation-menu .none{
+	display: none;
+}
+.navigation-menu .rotationleft{
+	height: 4px;
+	position: relative;
+	top: 6px;
+	transform: rotate(60deg);
+}
+.navigation-menu .rotationright{
+	height: 4px;
+	position: relative;
+	top: -4px;
+	transform: rotate(-60deg);
 }
 .contact,.fotter-division-top-right{
 	height: 100%;
@@ -306,7 +328,8 @@ h6{
 }
 .work-division-card{
 	display: flex;
-	justify-content: center;width: 25vw;
+	justify-content: center;
+	width: 25vw;
 	height: 15vw;
 	border-radius: 10px;
 	
@@ -460,10 +483,19 @@ h6{
 	.work-division-card{
 		display: flex;
 		justify-content: center;
-		width: 90vw;
 		height: 30vw;
 		border-radius: 10px;
-	
+	}
+	.work-division-card.left{
+		transform: translateX(7vw);
+		position: relative;
+		right: 0px;
+		width: 83vw;
+	}
+	.work-division-card.right{
+		position: relative;
+		left: 0px;
+		width: 83vw;
 	}
 	.navigation-right{
 		position: fixed;

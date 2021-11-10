@@ -1,12 +1,25 @@
 window.onload = () =>{
-	const navButton = document.querySelector(".navigation-menu svg");
+	const navButton = document.querySelector(".navigation-menu");
 	const navigation = document.querySelector(".navigation-right");
+	const workdivision = document.querySelectorAll(".work-division-card");
+	const span = document.querySelectorAll(".navigation-menu  span");
 	var slideIndex = 1;
 	const rightButton = document.querySelector(".right svg");
 	const leftButton = document.querySelector(".left svg" );
 	var dots = document.querySelectorAll(".dot");
+	for (var i = 0; i < workdivision.length; i++) {
+		if (i%2 == 0) {
+			workdivision[i].classList.toggle("right");
+		}else{
+			workdivision[i].classList.toggle("left");
+		}
+		
+	}
 	navButton.addEventListener("click",function () {
 		navigation.classList.toggle("show");
+		span[0].classList.toggle("rotationleft");
+		span[1].classList.toggle("none");
+		span[2].classList.toggle("rotationright");
 	});
 	rightButton.addEventListener("click",function() {
 		Nextimage(1)
@@ -44,5 +57,13 @@ window.onload = () =>{
   			}
  	 		slides[slideIndex-1].style.display = "block";
  	 		dots[slideIndex-1].className += " active";
-	} 
+	}
+	this.onscroll = function(){
+		if(document.documentElement.scrollTop > 500 ){
+			navigation.className = navigation.className.replace(" show","")
+			for(i = 0 ; i < span.length; i++) {
+				span[i].className = "";
+			}
+		}
+	}
 }
