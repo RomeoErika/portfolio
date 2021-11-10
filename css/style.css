@@ -32,12 +32,11 @@ html,body,p{
 	padding: 0px 7% 0px 7%;
 	box-shadow: -1em 0 5em rgba(0, 0, 0,0.2);  
  }
-.navigation-left h1{
-	background: white;
+.navigation-left h1,.logo-top h1{
 	font-family: "eurostile";
 	font-size: 2pc;
 }
-.navigation-left h1 span{
+.navigation-left h1 span {
 	color: #9400FF;
 }
 .navigation-right{
@@ -58,7 +57,7 @@ html,body,p{
 	cursor: pointer;
 
 }
-.contact{
+.contact,.fotter-division-top-right{
 	height: 100%;
 	width: 10vw;
 }
@@ -75,6 +74,7 @@ html,body,p{
 	color: #9400FF;
 	cursor: pointer;
 }
+
 .contact-content:hover{
 	background-color: #9400FF;
 	color: white;
@@ -104,7 +104,7 @@ html,body,p{
 	src: url("../font/MochiyPop.ttf");
 }
 .accueil-title-division #title h1{
-
+	text-align: center;
 	font-family: "eurostile";
 	font-size: 3pc;
 	margin: 10px;
@@ -113,6 +113,7 @@ html,body,p{
 	font-family: cursive;
 	font-size: 30px;
 	margin: 20px;
+	text-align: center;
 }
 .accueil-profil{
 	margin: 20px;
@@ -165,6 +166,7 @@ html,body,p{
 	font-family: "PTSans-bold",sans-serif;
 	font-size: 2pc;
 	margin: 20px ;
+	text-align: center;
 }
 .presentation-division-p div{
 	width: 70vw;
@@ -232,7 +234,7 @@ h6{
 	justify-content: center;
 }
 .work-division-title{
-	background-color: white;
+
 	width: 60vw;
 	height: 100px;
 	margin-bottom: 40px;
@@ -240,6 +242,10 @@ h6{
 .work-division-title div{
 	text-align: center;
 	justify-content: center;
+}
+.work-division-title div h2{
+	text-align: center;
+	font-family: "PTSans-bold",sans-serif;
 }
 .work-section div #work-division-title{
 	display: flex;
@@ -277,8 +283,133 @@ h6{
  	transform: scale(1.01);
  	box-shadow: 0.3em 0.3em .4em rgba(0, 0, 0, .7);
  }
+ .fotter-division-top-right .boutton{
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40%;
+	width: 100%;
+	border-radius: 50px;
+	border: 3px;
+	border-style: solid;
+	border-color: #9400FF;
+	cursor: pointer;
+}
+.fotter-division-top-left h2{
+	font-family: "PTSans-bold",sans-serif;
 
+ }
+.desc p{
+	color: white;
+	font-family: cursive;
+	font-size: 30px;
+	margin: 20px;
+	text-align: center;
+}
+.fotter-division-top-right{ 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 9vw;
+}
 
+ .boutton:hover{ 
+	background-color: #9400FF;
+	color: white;
+}
+.fotter-division-top-center{ 
+	width: 25vw;
+	height: 10vw;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+ .section-fotter{ 
+ 	background-color: #7510f7;
+ 	width: 100%;
+ 	padding-bottom: 20vw;
+ 	display: flex;
+ 	justify-content: center;
+ 	margin-top: 70px;
+ }
+ .section-division{ 
+ 	width: 80%;
+ }
+.fotter-division-top{ 
+	width: 87%;
+	height: 13vw;
+	padding-right: 5vw;
+	padding-left: 5vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(20,28,58,0.9);
+	border-radius: 10px;
+	color: white;
+}
+.fa-facebook-f,.fa-instagram,.fa-linkedin,.fa-twitter{ 
+	color: white;
+ }
+.reseaux-socio svg{ 
+	width: 20px;
+	cursor: pointer;
+ }
+.fotter-division-center .logo-top,.desc,.copyright{ 
+	color: white;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.copyright{
+	opacity: 0.3;
+}
+.reseaux-socio div{ 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px;
+	border-style: solid;
+	border-radius: 40px;
+	border-color: white;
+	height: 40px;
+	width: 40px;
+	opacity: 0.7;
+}
+
+.reseaux-socio{
+	display: flex;
+	justify-content: space-between; 
+	width: 20%;
+	padding:5% 40%;
+}
+.letter{
+	color: white;
+	animation: animation-fotter 1.2s linear infinite;
+}
+@keyframes animation-fotter{
+	0%{
+		color: white;
+	}
+	90%{
+		color: black;
+	}
+	100%{
+		color: white;
+	}
+}
+.letter:nth-child(1){
+	animation-duration: 2.2s;
+}
+.letter:nth-child(2){
+	animation-duration: 3.3s;
+}
+.letter:nth-child(3){
+	animation-duration: 4.4s;
+}
 
 @media only screen and (max-width: 858px) {
 	.work-section-card{
@@ -286,13 +417,12 @@ h6{
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
   		grid-gap: 4vw;
-
 	}
 	.work-division-card{
 		display: flex;
 		justify-content: center;
 		width: 90vw;
-		height: 20vw;
+		height: 30vw;
 		border-radius: 10px;
 	
 	}
@@ -329,20 +459,78 @@ h6{
 	.contact {
 		height: 50%;
 	}
-	.contact .contact-content{
-		height: 10vw;
-		width: 20vw;
+	.contact .contact-content,{
+		height: 10%;
+		width: 20%;
 	}
 	.navigation-menu{
 		display: initial;
 	}
-
+	.fotter-division-top{
+		display: inline-block;
+		height: auto;
+		padding-bottom: 60px;
+	} 
+	.fotter-division-top div{
+		display: flex;
+		margin: 10px;
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+	} 
+	.fotter-division-top-right {
+		height: 15vw;
+	}
+	.fotter-division-top-center p {
+		text-align: center;
+		width: 40%;
+	}
+	.section-fotter{ 
+ 		width: 100%;
+ 		height: auto;
+	}
+	.reseaux-socio{
+		width: 60%;
+		padding:5% 20%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-	.navigation-menu{
-		display: initial;
-	}
+	.work-division-title{
+		margin-top: 20%;
+	} 
 
 } 
+@media only screen and (max-width: 574px) {
+	.fotter-division-top div{ 
+		margin: 60px 0;
+	}
+	.fotter-division-top div{ 
+		padding-bottom:  0;
+	}
+	.navigation-bar{
+		height: 70px;
+	}
+	.vide{
+		display: none;
+	}
+	.presentation-division-tools{
+		width: 93vw;
+		display: inline;
+	}
+	.presentation-division-tools .card{
+		box-shadow: 0em 1em 4em rgba(0, 0, 0, 0.1);
+	}
+	.presentation-section{
+		padding-top: 10%;
+		margin-bottom:120em;
+		background-color: #7510F7;
+	}
+	.show{
+		top: 70px;
+	} 
+
+} 
+
 

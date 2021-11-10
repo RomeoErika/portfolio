@@ -5,12 +5,4 @@ window.onload = () =>{
 		navigation.classList.toggle("show");
 		this.src.toggle(".https://mattfarley.ca/")
 	})
-
-
-
-
-
-
-
-
 }
