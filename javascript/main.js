@@ -14,7 +14,11 @@ window.onload = () =>{
 	leftButton.addEventListener("click",function() {
 		Nextimage(-1)
 	});
-
+	for(let i = 0 ; i<dots.length;i++){
+		dots[i].addEventListener('click',function(){
+			imageActuel(i+1);
+		});
+	}
 	showSlides(slideIndex);
 	function Nextimage(n) {
 		showSlides(slideIndex += n);
