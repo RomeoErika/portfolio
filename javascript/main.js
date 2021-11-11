@@ -2,11 +2,18 @@ window.onload = () =>{
 	const navButton = document.querySelector(".navigation-menu");
 	const navigation = document.querySelector(".navigation-right");
 	const workdivision = document.querySelectorAll(".work-division-card");
+	const imageAccueil = document.querySelector(".image");
+	const image = document.querySelectorAll(".image-content img");
 	const span = document.querySelectorAll(".navigation-menu  span");
 	var slideIndex = 1;
 	const rightButton = document.querySelector(".right svg");
 	const leftButton = document.querySelector(".left svg" );
 	var dots = document.querySelectorAll(".dot");
+	for (var i = 0 ;i < image.length; i++) {
+		image[i].addEventListener("click",function() {
+				imageAccueil.classList.toggle('show');
+		});
+	}	
 	for (var i = 0; i < workdivision.length; i++) {
 		if (i%2 == 0) {
 			workdivision[i].classList.toggle("right");
